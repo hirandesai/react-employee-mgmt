@@ -39,10 +39,7 @@ function App() {
           </div>
           <Row>
               <Col md={12}>
-                <Switch>
-                    <Route path={["","/","/dashboard"]}>
-                      <DashboardPage onSubTitleChange={updateSubTitle} />
-                    </Route>
+                <Switch>                    
                     <Route path="/employee/add">
                       <AddEmployee onSubTitleChange={updateSubTitle} />
                     </Route>
@@ -52,6 +49,9 @@ function App() {
                     <Route path="/employee">
                       <EmployeeList onSubTitleChange={updateSubTitle} />
                     </Route>         
+                    <Route path={["","/","/dashboard"]}>
+                      <DashboardPage onSubTitleChange={updateSubTitle} />
+                    </Route>
                   </Switch>
               </Col>
             </Row>
